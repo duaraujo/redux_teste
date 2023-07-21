@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface Produto {
-    id: number;
     nome: string;
     preco: number;
     estoque: number;
@@ -15,7 +14,6 @@ interface ProdutosState {
 
 const initialState: ProdutosState = {
     produtos: [{
-        id: 1,
         nome: "Placa",
         preco: 100,
         estoque: 2,

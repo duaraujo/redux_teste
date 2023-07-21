@@ -9,7 +9,6 @@ export default function ListagemProdutos() {
       <table>
         <thead>
           <tr>
-            <th>ID</th>
             <th>Nome</th>
             <th>Preço</th>
             <th>Estoque</th>
@@ -19,7 +18,6 @@ export default function ListagemProdutos() {
           {produto.produtos.map((produto) => {
             return (
               <tr>
-                <th>{produto.id}</th>
                 <th>{produto.nome}</th>
                 <th>{produto.preco}</th>
                 <th>{produto.estoque}</th>

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from './redux/store';
 import { increment } from './redux/feature/count.slice';
 import ListagemProdutos from './components/listProdutos';
+import FormularioProduto from './components/formularioProduto';
 
 function App() {
   
@@ -27,6 +28,7 @@ function App() {
       }}
     >
       <div style={{ width: "50%" }}>
+        <FormularioProduto />
         <ListagemProdutos />
       </div>
     </div>
