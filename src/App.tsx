@@ -1,26 +1,36 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from './redux/store';
+import { increment } from './redux/feature/count.slice';
+import ListagemProdutos from './components/listProdutos';
 
 function App() {
+  
+  const dispatch = useDispatch();
+
+  const count = useSelector((state: RootState) => state.count);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    /* <div className='App'>
+      <p>{count.value}</p>
+      <button onClick={()=>dispatch(increment())}>+1</button>
+    </div> */
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyItems: "center",
+      }}
+    >
+      <div style={{ width: "50%" }}>
+        <ListagemProdutos />
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
